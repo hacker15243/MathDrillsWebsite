@@ -6,7 +6,14 @@ var totalQuestions = 0;
 var score = 0;
 
 var questionContainer;
-
+//TODO: add something to store data locally
+//  add something so that users can see their high score total
+//  add a time function
+//  add a end round functionality
+//  allow user to change which type of question they get (multiplication, addition, etc)
+//  allow user to change number range
+//  show stats for each one: mean accuracy, outliers, etc
+//  autoscroll when user adds an answer so page always stays at the bottom
 
 document.addEventListener("DOMContentLoaded", function() {
     console.log("The DOM is fully loaded!");
