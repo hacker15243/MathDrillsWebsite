@@ -6,18 +6,28 @@
     <title>Drill Page</title>
     <a href="home.html"><button>Back</button></a>
     <script src="logic.js"></script>
+    <link rel="stylesheet" href="style.css">
 
     
 </head>
 <body>
-    <h1 id = "score">Score: </h1>
-    <h1 id = "totalQuestions">Total Questions Answered: </h1>
-    <h1 id = "Accuracy">Questions Accuracy: 100% </h1>
-    <h2 id = "question"> 2 x 3 = </h2>
-    <form onsubmit = "handleSubmit(event)">
-        <input type = "text" id = "answer">
-        <button type = "submit">Enter!</button>
-    </form>
+    <div class = "stats">
+        <p1 id = "score">Score: </p1><br>
+        <p1 id = "totalQuestions">Total Questions Answered: </p1><br>
+        <p1 id = "Accuracy">Questions Accuracy: 100% </p1>
+
+    </div>
+    <div class = "scrollable-content">
+        <h2 id = "question"></h2>
+        
+    </div>
+    <div class = "answerContent">
+        <form onsubmit = "handleSubmit(event)">
+            <input type = "text" id = "answer">
+            <button type = "submit">Enter!</button>
+        </form>
+    </div>
+    
    
 </body>
 </html>
