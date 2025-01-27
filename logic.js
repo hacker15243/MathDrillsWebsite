@@ -6,6 +6,11 @@ var totalQuestions = 0;
 var score = 0;
 
 var questionContainer;
+var sec = 10; //start time
+//^^ gives 10 seconds to answer the question
+// var 
+var timerElement;
+
 //TODO: add something to store data locally
 //  add something so that users can see their high score total
 //  add a time function
@@ -18,6 +23,7 @@ var questionContainer;
 document.addEventListener("DOMContentLoaded", function() {
     console.log("The DOM is fully loaded!");
     questionContainer = document.getElementById("question")
+    timerElement = document.getElementById("timer")
     console.log(questionContainer);
     onStart();
 });
@@ -25,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function onStart(){
     console.log("started");
     generateQuestion();
+    startTimer();
 }
 
 function handleSubmit(event){
@@ -33,6 +40,15 @@ function handleSubmit(event){
     event.preventDefault();
     userAnswer = document.getElementById("answer").value;
     document.getElementById("answer").value = "";
+    
+    handleSubmitHelper();
+
+}
+
+function handleSubmitHelper(){
+    //reset timer
+    sec = 10;
+
     // alert(`your answer is: ${answer}`);
     //this part checks the answer and based on that it updates the scores and stuff
     if(checkAnswer()){
@@ -50,7 +66,6 @@ function handleSubmit(event){
 
     //don't wait, generate quetsion
     generateQuestion();
-
 }
 
 function checkAnswer(){
@@ -78,4 +93,28 @@ function updateScores(){
     questionContainer.innerHTML += userAnswer;
     // document.getElementById("question").innerHTML = num1 + " + " + num2 + " = " + userAnswer;
     document.getElementById("totalQuestions").innerHTML = "Total Questions Answered: " + totalQuestions;
+}
+
+function formatTime(sec){
+    const hours = String(Math.floor(sec / 3600)).padStart(2, "0");
+  const minutes = String(Math.floor((sec % 3600) / 60)).padStart(2, "0");
+  const seconds = String(sec % 60);
+  return "Time left: " + seconds + " seconds";
+//   return `${hours}:${minutes}:${seconds}`;
+}
+
+// Handles the time stuff of everything
+//starts the time and ticks down one second each second and updates the html
+function startTimer() {
+    setInterval(() => {
+        console.log("time updated");
+        sec--;
+        timerElement.textContent = formatTime(sec);
+        //check the time
+        //if the time is less than/equal to 0, the answer was wrong
+        if(sec <= 0){
+            userAnswer = "";
+            handleSubmitHelper();
+        }
+    }, 1000);
 }
