@@ -1,6 +1,7 @@
 body{
     margin: 0;
     /* display: flex; */
+    /* background-color: rgb(24, 20, 70); */
     /* align-items: center; */
 }
 .stats{
@@ -37,10 +38,22 @@ body{
 
 
 .scrollable-content {
-    margin-left: 33%;
-    margin-right: 33%;
-    /* text-align: center; */
+    margin:0 auto;
+    width: 34%;
+    overflow-y: scroll;
+    height: calc(100vh - 270px);
+    /* text-align: center;
     /* height: 200vh; Make the page scrollable */
     padding: 20px;
+    background: linear-gradient(to bottom, #edfcff, #ebdce9);
+  } 
+
+  /* #question{
+    margin-left: 33%;
+    margin-right: 33%;
+    overflow-y: auto;
+    /* text-align: center; */
+    /* height: 200vh; Make the page scrollable */
+     /* padding: 20px;
     background: linear-gradient(to bottom, #e3f2fd, #418fd0);
-  }
+  } */

@@ -84,7 +84,19 @@ function generateQuestion(){
     //Add a line break and then add the new line of text created above
     questionContainer.appendChild(document.createElement("br"));
     questionContainer.appendChild(temp);
+    setTimeout(() => {
+        // container.scrollTop = container.scrollHeight;
+        (document.getElementsByClassName("scrollable-content")[0]).scrollTop = (document.getElementsByClassName("scrollable-content")[0]).scrollHeight;
+        const container = document.getElementsByClassName("scrollable-content")[0];
+console.log(container)
+    }, 0);
+    console.log(document.getElementsByClassName("scrollable-content")[0])
+    console.log(document.getElementsByClassName("scrollable-content")[0].scrollTop);
+    document.getElementsByClassName("scrollable-content")[0].scrollTop = 2000;
     // document.getElementById("question").innerHTML = num1 + " + " + num2 + " = ";
+    console.log(document.getElementById("question").scrollTop);
+    // document.getElementById("question").scrollTop = 100;
+
 }
 
 function updateScores(){
