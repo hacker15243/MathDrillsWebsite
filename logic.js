@@ -13,7 +13,7 @@ var timerElement;
 
 //TODO: add something to store data locally
 //  add something so that users can see their high score total
-//  add a time function - done
+//  DONE: add a time function
 //  add a end round functionality
 //  allow user to change which type of question they get (multiplication, addition, etc)
 //  allow user to change number range

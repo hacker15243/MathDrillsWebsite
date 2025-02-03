@@ -1,9 +1,56 @@
 body{
     margin: 0;
+    /* height: 100%; */
     /* display: flex; */
     /* background-color: rgb(24, 20, 70); */
     /* align-items: center; */
 }
+
+.title{
+    text-align: center;
+}
+
+/*.trainerBody{ 
+    background: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10%), /* Dotted effect */
+    /*repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 10px, transparent 10px, transparent 20px), /* Diagonal lines */
+    /*linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient */
+
+/*background-size: 40px 40px, 30px 30px, cover; /* Define pattern sizes */
+/*}*/
+
+
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
 .stats{
     /* Text css */
     font-size: 22px;
@@ -19,6 +66,7 @@ body{
 }
 
 .answerContent{
+    margin: 0;
     text-align: center;
     /* font-size: 33px; */
     position: sticky;
@@ -47,13 +95,3 @@ body{
     padding: 20px;
     background: linear-gradient(to bottom, #edfcff, #ebdce9);
   } 
-
-  /* #question{
-    margin-left: 33%;
-    margin-right: 33%;
-    overflow-y: auto;
-    /* text-align: center; */
-    /* height: 200vh; Make the page scrollable */
-     /* padding: 20px;
-    background: linear-gradient(to bottom, #e3f2fd, #418fd0);
-  } */
