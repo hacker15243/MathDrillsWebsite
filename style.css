@@ -1,56 +1,75 @@
 body{
     margin: 0;
+    height: 100%;
+    font-family: "Pixelify Sans", serif;
     /* height: 100%; */
     /* display: flex; */
     /* background-color: rgb(24, 20, 70); */
     /* align-items: center; */
 }
 
+
+/* ------------------------ General CSS ------------------------ */
 .title{
     text-align: center;
+    font-family: "Pixelify Sans", serif;
+    font-weight: normal;
+    font-size: 36px;
 }
 
-/*.trainerBody{ 
-    background: 
-    radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10%), /* Dotted effect */
-    /*repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 10px, transparent 10px, transparent 20px), /* Diagonal lines */
-    /*linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient */
 
-/*background-size: 40px 40px, 30px 30px, cover; /* Define pattern sizes */
-/*}*/
+/* ------------------------ Home Page CSS ------------------------ */
 
-
-
-.navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 15px 20px;
+#homeBody {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 228, 244, 1) 0%,
+        rgba(192, 222, 255, 1) 100%
+    );
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
-.logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+
+.directory{
+    margin-top: 7%;
+    text-align: center;
+    /* font */
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links a {
+.directory a{
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color:black;
+    font-size: 32px;
+    font-weight: normal;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #ff9800;
+.directory a:hover{
+    color: rgba(156, 173, 206, 1);
 }
 
+#settingsButton{
+    background-image: url("images\\GearIconPixelated.png");
+    background-color: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    border:none;
+}
+
+#settingsButton:hover{
+    /* pointer-events: ; */
+    cursor: pointer;
+}
+
+
+
+
+/* ------------------------ Train Math CSS ------------------------ */
 .stats{
     /* Text css */
     font-size: 22px;
@@ -95,3 +114,36 @@ body{
     padding: 20px;
     background: linear-gradient(to bottom, #edfcff, #ebdce9);
   } 
+
+
+  /* ------------------------ Nav bar css ------------------------ */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E4E4E4;
+    padding: 15px 20px;
+}
+
+.logo {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links a {
+    font-family: "Pixelify Sans", serif;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9CADCE;
+}
