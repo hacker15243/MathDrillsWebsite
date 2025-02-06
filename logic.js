@@ -20,6 +20,8 @@ var timerElement;
 //  show stats for each one: mean accuracy, outliers, etc
 //  autoscroll when user adds an answer so page always stays at the bottom
 
+// console.log()
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("The DOM is fully loaded!");
     questionContainer = document.getElementById("question")
